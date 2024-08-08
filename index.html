@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="white_on_trans.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="calc-display" readonly value="0">
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="clearAll()">AC</button>
+            <button class="btn" onclick="clearEntry()">Del</button>
+            <button class="btn operator" onclick="inputValue('%')">%</button>
+            <button class="btn operator" onclick="inputValue('/')">/</button>
+            
+            <button class="btn" onclick="inputValue('7')">7</button>
+            <button class="btn" onclick="inputValue('8')">8</button>
+            <button class="btn" onclick="inputValue('9')">9</button>
+            <button class="btn operator" onclick="inputValue('*')">*</button>
+            
+            <button class="btn" onclick="inputValue('4')">4</button>
+            <button class="btn" onclick="inputValue('5')">5</button>
+            <button class="btn" onclick="inputValue('6')">6</button>
+            <button class="btn operator" onclick="inputValue('-')">-</button>
+            
+            <button class="btn" onclick="inputValue('1')">1</button>
+            <button class="btn" onclick="inputValue('2')">2</button>
+            <button class="btn" onclick="inputValue('3')">3</button>
+            <button class="btn operator" onclick="inputValue('+')">+</button>
+            
+            <button class="btn" onclick="inputValue('0')">0</button>
+            <button class="btn" onclick="inputValue('.')">.</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
