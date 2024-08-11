@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="loading-container" class="loading-container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="loading-text">Loading...</div>
+    </div>
     <div class="calculator">
         <div class="display">
             <input type="text" id="calc-display" readonly value="0">
@@ -39,5 +43,30 @@
         </div>
     </div>
     <script src="script.js" defer></script>
+    <script>
+        // Set a minimum display time for the loading screen
+        const minLoadingTime = 2000; // 5000 milliseconds = 5 seconds
+        const loadingStartTime = new Date().getTime();
+    
+        window.addEventListener('load', function() {
+            const currentTime = new Date().getTime();
+            const elapsedTime = currentTime - loadingStartTime;
+            const remainingTime = minLoadingTime - elapsedTime;
+    
+            if (remainingTime > 0) {
+                setTimeout(hideLoadingScreen, remainingTime);
+            } else {
+                hideLoadingScreen();
+            }
+        });
+    
+        function hideLoadingScreen() {
+            // Hide the loading screen
+            document.getElementById('loading-container').style.display = 'none';
+            // Show the content
+            document.querySelector('.container-fluid').style.display = 'flex';
+            document.getElementById('dnone').style.display = 'block';
+        }
+    </script>    
 </body>
 </html>
