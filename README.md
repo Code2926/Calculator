@@ -47,7 +47,7 @@ This project is licensed under the MIT License. See the `LICENSE.txt` file for d
 
 ## Screenshots
 
-![Calculator Screenshot](calculator.png)
+![Calculator](calculator.png)
 
 ## Known Issues
 
